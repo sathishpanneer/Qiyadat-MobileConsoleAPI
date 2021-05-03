@@ -268,7 +268,7 @@ namespace Uaeglp.Web.Controllers
             return Ok(result);
         }
 
-        [HttpPost("cv-parsing", Name = "CVParsing")]
+        [HttpPost("cv-parsing", Name = "CVParsings")]
         public async Task<IActionResult> CVParsingAsync()
         {
             var data = Request.Form.Files[0];
