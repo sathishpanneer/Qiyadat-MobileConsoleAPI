@@ -57,7 +57,7 @@ namespace Uaeglp.Services
                 var model = new LeadershipPointSystemView
                 {
                     ProfileId = profile.Id,
-                    CurrentPoints = profile.Lpspoints,
+                    CurrentPoints = Convert.ToInt32(profile.Lpspoints),
                     Badges = _mapper.Map<List<BadgeView>>(badges),
                     CriteriaList = _mapper.Map<List<CriteriaView>>(criteria)
                 };
@@ -101,7 +101,7 @@ namespace Uaeglp.Services
                     ProfileId = profile.Id,
                     CriteriaId = criteriaId,
                     CriteriaClaimedPoints = earnedPoints,
-                    TotalClaimedPoints = profile.Lpspoints,
+                    TotalClaimedPoints = Convert.ToInt32(profile.Lpspoints),
                     ClaimedList = _mapper.Map<List<CriteriaClaimView>>(criteriaClaims.Where(k => k.StatusId == (int)ClaimStatusType.Accepted && !k.IsDeleted).ToList()),
                     PendingList = _mapper.Map<List<CriteriaClaimView>>(criteriaClaims.Where(k => k.StatusId == (int)ClaimStatusType.Pending && !k.IsDeleted).ToList())
                 };

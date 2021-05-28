@@ -150,7 +150,7 @@ namespace Uaeglp.Models
         [Column("BadgeID")]
         public int? BadgeId { get; set; }
         [Column("LPSPoints")]
-        public int Lpspoints { get; set; }
+        public decimal Lpspoints { get; set; }
         [Column(TypeName = "datetime")]
         public DateTime? TotalYearsOfExperinceLastUpdated { get; set; }
         [Column(TypeName = "decimal(10, 3)")]

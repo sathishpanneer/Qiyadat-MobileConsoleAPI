@@ -28,7 +28,7 @@ namespace Uaeglp.ViewModels.ProfileViewModels
         public int FollowingCount { get; set; }
         public int FollowersCount { get; set; }
         public decimal CompletePercentage { get; set; }
-        public int LPSPoint { get; set; }
+        public decimal LPSPoint { get; set; }
 
         public int UserImageFileId { get; set; }
         public string ProfileImageUrl  => ConstantUrlPath.ProfileImagePath + UserImageFileId;

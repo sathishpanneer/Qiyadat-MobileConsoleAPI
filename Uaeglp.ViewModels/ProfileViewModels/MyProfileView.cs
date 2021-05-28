@@ -42,7 +42,7 @@ namespace Uaeglp.ViewModels.ProfileViewModels
         public int FollowingCount { get; set; }
         public int FollowersCount { get; set; }
 
-        public int LPSPoint { get; set; }
+        public decimal LPSPoint { get; set; }
         public string TotalYearsOfExperience { get; set; }
         public BioView Bio { get; set; } = new BioView();
         public List<ProfileEducationView> ProfileEducation { get; set; }
